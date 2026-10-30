@@ -1,0 +1,39 @@
+{
+    "frutas": [
+        {
+            "id": 1,
+            "nome": "Maçã",
+            "preco": 4.20,
+            "imagem": "src/assets/maca.jpg",
+            "embedding": [8, 3]
+        },
+        {
+            "id": 2,
+            "nome": "Limão",
+            "preco": 2.50,
+            "imagem": "src/assets/limao.jpg",
+            "embedding": [1, 9]
+        },
+        {
+            "id": 3,
+            "nome": "Banana",
+            "preco": 5.00,
+            "imagem": "src/assets/banana.jpg",
+            "embedding": [9, 1]
+        },
+        {
+            "id": 4,
+            "nome": "Manga",
+            "preco": 9.00,
+            "imagem": "src/assets/manga.jpg",
+            "embedding": [9, 5]
+        },
+        {
+            "id": 5,
+            "nome": "Melão",
+            "preco": 10.00,
+            "imagem": "src/assets/melao.jpg",
+            "embedding": [8, 5]
+        }
+    ]
+}

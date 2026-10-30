@@ -1,0 +1,119 @@
+:root {
+    --cor-primaria: #2e7d32;
+    --cor-secundaria: #81c784;
+    --cor-fundo: #f1f8e9;
+    --cor-texto: #333;
+    --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--cor-primaria);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    box-shadow: var(--sombra);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 850px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+@media (min-width: 650px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.painel-controle,
+.resultados {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-weight: bold;
+    color: var(--cor-primaria);
+}
+
+input {
+    width: calc(100% - 1rem);
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.8rem;
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.erro {
+    color: #d32f2f;
+    margin-top: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.card-fruta {
+    text-align: center;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.card-fruta img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+    margin-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
