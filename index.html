@@ -1,11 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Painel Interativo - Hortifruti</title>
+    <link rel="stylesheet" href="src/css/estilo.css">
+    <!-- import pyscript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script>
 </head>
+
 <body>
-    
-</body>
+    <header>
+        <h1>Painel Multimodal Interativo - Hortifruti</h1>
+    </header>
+
+    <main class="grid-container">
+        <section class="painel-controle">
+            <h2>Buscar Produto por Perfil</h2>
+            <p>Defina o perfil de sabor desejado para encontrar a fruta ideal.</p>
+            <label>Doçura (0-10): <input type="number" id="input-docura" min="0" max="10" value="0"></label>
+            <label>Acidez (0-10): <input type="number" id="input-acidez" min="0" max="10" value="0"></label>
+
+            <button id="btn-buscar" py-click="processar_busca">Procurar com IA</button>
+            <div id="msg-erro" class="erro"></div>
+        </section>
+
+        <section class="resultados" id="resultados">
+            <p style="text-align: center; color: #777;">Os resultados aparecerão aqui.</p>
+        </section>
+    </main>
+
+    <py-config>
+        packages = ["numpy"]
+
+        [[fetch]]
+        from = "src/python/"
+        files = ["dados.json"]
+    </py-config>
+
+    <script type="py" src="./src/python/main.py"></script>
+
 </html>
